@@ -1,0 +1,45 @@
+
+{
+
+	"manifest_version": 2,
+	"name": "Savedis",
+	"version": "1.0",
+
+	"description": "None",
+	"icons": {
+		"96": "miku.jpg"
+	},
+
+	"permissions": [
+		"webRequest",
+		"<all_urls>",
+		"notifications",
+		"activeTab"
+	],
+	
+	"background":{
+		"scripts": ["background.js"]
+	},
+
+	"browser_action": {
+		"default_icon": "miku.jpg",
+		"default_title": "Savedis"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["script.js"]
+		}
+	],
+
+	"commands": {
+		"save-hotkey": {
+		  "suggested_key": {
+			"default": "Ctrl+Alt+S"
+		  },
+		  "description": "Save the current page into bookmark"
+		}
+	  },
+	"content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
