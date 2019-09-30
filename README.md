@@ -30,11 +30,7 @@ The project is already in production running on my browser, with minor features 
 - [x] Extract url and title
 - [x] Auto insert to bookmark
 - [x] Status feedback
-- [ ] Create interface
-  
-#### Known Issue
-
- ---
+- [x] Put insert label from youtube/reddit
   
   
 ## Instructions
@@ -43,12 +39,15 @@ The project is already in production running on my browser, with minor features 
 
 **For development**
 
-Temporarily load the add on to Firefox from [here](about:debugging)
+Temporarily load the add on to Firefox from about:debugging
 
 
-Logged console messages from background script do not appear in the web page, but in the (invisible) background page. In Firefox, open the background console using `Ctrl + Shift + J`. Alert() also has no effect from background.
+Logged console messages from background script do not appear in the web page, but in the (invisible) background page. In Firefox, open the background console using `Ctrl + Shift + J`.  Alert() also has no effect from background.
  
 **For production**
 
-Obtain the `savedis.zip` file and follow [instruction](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Distribution_options/Sideloading_add-ons#Using_Install_Add-on_From_File) to load add on to Firefox
+Submit the addon to [here](https://addons.mozilla.org/en-US/developers/), [guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on) 
 
+Upload the whole project as a zip and download the ```savedis-version-fx.xpi``` file
+
+Follow the [Using Install Add-on From File Section] (https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Distribution_options/Sideloading_add-ons#Using_Install_Add-on_From_File) to load the xpi file to Firefox
